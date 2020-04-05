@@ -1,2 +1,3 @@
 # RLE-publication-list
-List of publications related to IUCN Red List of Ecosystem assessments
+
+Commented and curated list of publications related to IUCN Red List of Ecosystem assessments
