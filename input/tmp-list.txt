@@ -55,3 +55,73 @@
 10.1371/journal.pone.0062111
 10.1371/journal.pone.0160640
 10.17520/biods.2016134
+
+
+doi                                                                                                                                                title
+
+PRE ASSESSMENT
+1                  10.1002/fee.1747                                                                       Developing a standardized definition of ecosystem collapse for risk assessment
+3         10.1007/s10531-006-9102-1                                     Assessing extinction risk in the absence of species-level data: quantitative criteria for terrestrial ecosystems
+4         10.1007/s10531-009-9684-5                                                                         New method and criteria for national assessments of threatened habitat types
+8      10.1016/j.biocon.2009.02.015                                             A new approach and case study for estimating extent and rates of habitat loss for ecological communities
+22        10.1080/00045600701733911                                          Historical Patterns and Drivers of Landscape Change in Colombia Since 1500: A Regionalized Spatial Approach
+15    10.1016/j.ecolind.2017.06.049                                                      Modeling landscape condition for biodiversity assessment—Application in temperate North America
+18        10.1016/j.jnc.2016.03.007                                                                              Habitats on the grid: The spatial dimension does matter for red-listing
+20  10.1016/j.scitotenv.2017.11.034                                                                        The role of satellite remote sensing in structured ecosystem risk assessments
+52 10.1111/j.1442-8903.2009.00453.x                                                                            The interpretation, assessment and conservation of ecological communities
+53 10.1111/j.1523-1739.2010.01598.x                                                                                        Establishing IUCN Red List Criteria for Threatened Ecosystems
+55     10.1371/journal.pone.0062111                                                                                            Scientific Foundations for an IUCN Red List of Ecosystems
+57           10.17520/biods.2016134                                                                                  Research advances and challenges in the IUCN Red List of Ecosystems
+47               10.1111/cobi.13107                                                                         Selecting and applying indicators of ecosystem collapse for risk assessments
+45               10.1111/cobi.12988                                                                       Scaling range sizes to threats for robust predictions of risks to biodiversity
+48               10.1111/conl.12111                                                                            Challenging the Scientific Foundations for an IUCN Red List of Ecosystems
+49               10.1111/conl.12167                                                                           The IUCN Red List of Ecosystems: Motivations, Challenges, and Applications
+51                10.1111/ddi.12533                                                                        The use of range size to assess risks to biodiversity from stochastic threats
+27           10.1098/rstb.2014.0003                                                                     A practical guide to the application of the IUCN Red List of Ecosystems criteria
+28                   10.1101/212464                                                             REMAP: An online remote sensing application for land cover classification and monitoring
+23    10.1080/14888386.2015.1068710                                                                       Challenges and opportunities for the Bolivian Biodiversity Observation Network
+29                10.1111/aec.12148                                          Towards consistency, rigour and compatibility of risk assessments for ecosystems and ecological communities
+39                10.1111/aec.12249                                                                                               Assessing and managing risks to ecosystem biodiversity
+
+
+ASSESSMENT
+6         10.1007/s12210-018-0688-5               Habitat conservation in Italy: the state of the art in the light of the first European Red List of Terrestrial and Freshwater Habitats
+7         10.1007/s40333-020-0121-7                                                   Assessing the collapse risk of Stipa bungeana grassland in China based on its distribution changes
+10     10.1016/j.biocon.2016.10.038    Assessment of quality of input data used to classify ecosystems according to the IUCN Red List methodology: The case of the central Chile hotspot
+11     10.1016/j.biocon.2017.09.011                Preliminary assessment of ecosystem risk based on IUCN criteria in a hierarchy of spatial domains: A case study in Southwestern China
+12     10.1016/j.biocon.2018.08.019                                                                   Assessing risks to marine ecosystems with indicators, ecosystem models and experts
+19  10.1016/j.ocecoaman.2017.02.021                                                                                                       Assessing risk of estuarine ecosystem collapse
+17    10.1016/j.ecolind.2019.105446                                                                                                           Red List of Habitats of the Czech Republic
+14    10.1016/j.ecoleng.2014.05.006                      Threat evaluation for biodiversity conservation of forest ecosystems using geospatial techniques: A case study of Odisha, India
+16    10.1016/j.ecolind.2018.03.076                                        Assessing ecosystem collapse risk in ecosystems dominated by foundation species: The case of fringe mangroves
+21        10.1017/s0376892908005237                                                                    Tropical dry forests in Venezuela: assessing status, threats and future prospects
+30                10.1111/aec.12177                                                 Assessing risks to ecosystems within biodiversity hotspots: a case study from southwestern Australia
+31                10.1111/aec.12199                                                                    Risks to a mountain summit ecosystem with endemic biota in southwestern Australia
+32                10.1111/aec.12200                                            Ecosystem assessment of mountain ash forest in the Central Highlands of Victoria, south-eastern Australia
+33                10.1111/aec.12201                                                                  Ecosystem risk assessment for Cumberland Plain Woodland, New South Wales, Australia
+34                10.1111/aec.12202                                                                Ecosystem risk assessment for Gnarled Mossy Cloud Forest, Lord Howe Island, Australia
+35                10.1111/aec.12203                                                                                       Status of connected wetlands of the Lake Eyre Basin, Australia
+36                10.1111/aec.12209                                                           Predicting ecosystem collapse: Spatial factors that influence risks to tropical ecosystems
+37                10.1111/aec.12211                                                                Tidal flats of the Yellow Sea: A review of ecosystem status and anthropogenic threats
+38                10.1111/aec.12237                                                                                 Vulnerability of Antarctic shallow invertebrate-dominated ecosystems
+54 10.1111/j.1523-1739.2012.01868.x                                                                                     Status Assessment of New Zealand's Naturally Uncommon Ecosystems
+50               10.1111/conl.12623                     An ecosystem risk assessment of temperate and tropical forests of the Americas with an outlook on future conservation strategies
+44               10.1111/cobi.12065                                            Effect of Land Cover and Ecosystem Mapping on Ecosystem-Risk Assessment in the Little Karoo, South Africa
+46               10.1111/cobi.13038                                Use of long-term data to evaluate loss and endangerment status of Natura 2000 habitats and effects of protected areas
+40                10.1111/aec.12263 An International Union for Conservation of Nature risk assessment of coastal lowland rainforests of the Wet Tropics Bioregion, Queensland, Australia
+41                10.1111/aec.12265                                                                          Ecosystem risk assessment of Georgina gidgee woodlands in central Australia
+42                10.1111/aec.12266  An International Union for the Conservation of Nature Red List ecosystems risk assessment for alpine snow patch herbfields, South-Eastern Australia
+25    10.1080/23766808.2017.1298495     Biodiversity patterns and ecological processes in Neotropical dry forest: the need to connect research and management for long-term conservation
+26           10.1098/rspb.2017.0660                                                                            Using multiple lines of evidence to assess the risk of ecosystem collapse
+
+POST ASSESSMENT
+24    10.1080/14888386.2015.1075903                             Harnessing biodiversity and conservation knowledge products to track the Aichi Targets and Sustainable Development Goals
+56     10.1371/journal.pone.0160640                                                                                 Assessing the Cost of Global Biodiversity and Conservation Knowledge
+43               10.1111/avsc.12112                                                                  Separating risks from values in setting priorities for plant community conservation
+
+
+UNCLASSIFIED
+2         10.1007/s10021-001-0051-y                                                                            The Ecosystem as a Multidimensional Concept: Meaning, Model, and Metaphor
+5         10.1007/s10531-013-0497-1                                                           The scientific value of the largest remaining old-growth red pine forests in North America
+9      10.1016/j.biocon.2011.02.004                                        Incorporating temporality and biophysical vulnerability to quantify the human spatial footprint on ecosystems
+13     10.1016/j.ecoinf.2016.08.003                            Development of a cloud-based platform for reproducible science: A case study of an IUCN Red List of Ecosystems Assessment

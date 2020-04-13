@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<References>
+
+<!--//
+<Reference label="">
+<Ref-information>
+<DOI></DOI>
+<citation></citation><citation></citation>
+</Ref-information>
+<Ecosystem-risk-assessment-content>
+<Assessment-step></Assessment-step>
+<Risk-assessment-protocol></Risk-assessment-protocol>
+<Available-information></Available-information>
+</Ecosystem-risk-assessment-content>
+  </Reference>
+//-->
+
+  <Reference label="Schaefer-AU-Hawkesbury-Shelf-rocky-shore">
+  <Ref-information>
+  <DOI>10.1016/j.jenvman.2020.110203</DOI>
+  </Ref-information>
+  <Ecosystem-risk-assessment-content>
+  <Assessment-step>Risk assessment</Assessment-step>
+  <Risk-assessment-protocol>IUCN RLE</Risk-assessment-protocol>
+  <Available-information>
+<Country>Australia</Country>
+  </Available-information>
+  </Ecosystem-risk-assessment-content>
+    </Reference>
+
+    <Reference label="Qiao-CH-Stipa-bungeana-grassland">
+    <Ref-information>
+    <DOI>10.1007/s40333-020-0121-7</DOI>
+    </Ref-information>
+    <Ecosystem-risk-assessment-content>
+    <Assessment-step>Risk assessment</Assessment-step>
+    <Risk-assessment-protocol>IUCN RLE</Risk-assessment-protocol>
+    <Available-information>
+      <Country>China</Country>
+    </Available-information>
+    </Ecosystem-risk-assessment-content>
+      </Reference>
+
+<Reference label="Rowland">
+<Ref-information>
+<DOI>10.1111/conl.12680</DOI>
+</Ref-information>
+<Ecosystem-risk-assessment-content>
+<Assessment-step>Post assessment</Assessment-step>
+<Risk-assessment-protocol>IUCN RLE</Risk-assessment-protocol>
+<Available-information>
+</Available-information>
+</Ecosystem-risk-assessment-content>
+  </Reference>
+
+      <Reference label="Alaniz">
+      <Ref-information>
+      <DOI>10.1111/conl.12665</DOI>
+      </Ref-information>
+      <Ecosystem-risk-assessment-content>
+      <Assessment-step>Post assessment</Assessment-step>
+      <Risk-assessment-protocol>IUCN RLE</Risk-assessment-protocol>
+      <Available-information>
+      </Available-information>
+      </Ecosystem-risk-assessment-content>
+        </Reference>
+
+
+</References>

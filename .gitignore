@@ -1,3 +1,9 @@
+# tmp folder
+tmp
+
+# tmp files
+~*
+
 # History files
 .Rhistory
 .Rapp.history

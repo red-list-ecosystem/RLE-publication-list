@@ -18,7 +18,11 @@ mis.dois <- read.csv("~/proyectos/IUCN/RLE-publication-list/input/DOI-check-list
 
 ref.info <- cr_works(dois = mis.dois,.progress="text")
 
+ref.info$data$title
+ print.AsIs(ref.info$data[,c("doi","title")])
 
+system("mkdir -p ~/proyectos/IUCN/RLE-publication-list/Rdata")
+save(file="~/proyectos/IUCN/RLE-publication-list/Rdata/CR-biblio-info.rda",ref.info)
 
 ## Intro en https://poldham.github.io/abs/crossref.html
 ref.info$data %>% count(subject, sort = TRUE)
