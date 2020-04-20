@@ -21,3 +21,7 @@ a.dois <- grep("^10",unique(a.sumr$DOI),value=T)
 
  subset(a.step,!V1 %in% mis.dois)$V1
  subset(a.dois,!a.dois %in% mis.dois)
+
+output.arch <- "~/proyectos/IUCN/RLE-publication-list/docs/_posts/pre-assessment.md"
+slc <- subset(a.step,V2 %in% "pre assessment")$V1
+cat(file=output.arch,with(subset(ref.info$data,doi %in% slc),sprintf("* [%s](http://doi.org/%s)\n",title,doi)))
