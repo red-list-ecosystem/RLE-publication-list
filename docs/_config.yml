@@ -8,9 +8,9 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: "listas"
     values:
-      layout: "posts"
+      layout: "listas"
   - scope:
       path: ""
     values:
