@@ -11,8 +11,7 @@ defaults:
       type: "posts"
     values:
       layout: "posts"
- - scope:
+  - scope:
       path: ""
     values:
       layout: "default"
- 

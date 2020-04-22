@@ -14,7 +14,7 @@ We consider three types of publications in this collection:
 
 
 
-<ul>
+<ul> List of posts
   {% for post in site.posts %}
     <li>
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
