@@ -1,3 +1,8 @@
+---
+title: Pre-assessment publications
+---
+References with information related to guidelines, methods and data gathering prior to the proper assessment.
+
 *  (2007-01) [Assessing extinction risk in the absence of species-level data: quantitative criteria for terrestrial ecosystems](http://doi.org/10.1007/s10531-006-9102-1)
  *  (2008-02-05) [Historical Patterns and Drivers of Landscape Change in Colombia Since 1500: A Regionalized Spatial Approach](http://doi.org/10.1080/00045600701733911)
  *  (2009-07) [A new approach and case study for estimating extent and rates of habitat loss for ecological communities](http://doi.org/10.1016/j.biocon.2009.02.015)
