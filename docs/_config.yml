@@ -22,8 +22,8 @@ title: IUCN RLE bibliography
 ## email: j.ferrer@unsw.edu.au
 description: >- # this means to ignore newlines until "baseurl:"
   Lists of scientific publications and other resources related to the IUCN Red List of Ecosystems.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/RLE-publication-list" # the subpath of your site, e.g. /blog
+url: "https://red-list-ecosystem.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jrfep
 github_username:  jrfep
 
