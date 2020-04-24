@@ -14,7 +14,7 @@ Our main focus and priority is to summarize the state of progress of IUCN RLE as
 <ul>
   {% for post in site.listas %}
     <li>
-      <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
       {{ post.excerpt }}
     </li>
   {% endfor %}

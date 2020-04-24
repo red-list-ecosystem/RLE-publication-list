@@ -2,7 +2,7 @@
 layout: post
 title:  "And the site is up..."
 date:   2020-04-24 10:08:07 +1000
-categories: jekyll update
+categories: public
 ---
 
 Ok, I am learning to use [jekyll][jekyll-docs], and this is only a test to see if every thing is working fine... and it is!
