@@ -1,3 +1,7 @@
+## Input
+
+* *RLE-collection-DOI-download.bib*: Downloaded with `GetBibEntryWithDOI()` from `RefManageR`
+
 ## Manual lists of records
 
 * *RLEcollection.bib*: Manual list of record inherited from other RLE related projects.

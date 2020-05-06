@@ -1,6 +1,7 @@
 #!R --vanilla
 require(gdata)
-
+require(bibtex)
+require(RefManageR)
 require(RJSONIO)
 require(rcrossref)
 require(xml2)
@@ -15,6 +16,8 @@ library(ggplot2)
 ##library(tidyr)
 
 mis.dois <- read.csv("~/proyectos/IUCN/RLE-publication-list/input/DOI-check-list.txt",header=F,as.is=T)$V1
+
+ref.info <- GetBibEntryWithDOI(mis.dois[1:30],temp.file="~/proyectos/IUCN/RLE-publication-list/bibtex/tempfile.bib",delete.file=F)
 
 ref.info <- cr_works(dois = mis.dois,.progress="text")
 
