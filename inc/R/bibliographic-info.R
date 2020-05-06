@@ -2,6 +2,8 @@
 require(bibliometrix)
 require(readODS)
 require(dplyr)
+require(purrr)
+
 
 A0 <- readFiles("~/proyectos/IUCN/RLE-publication-list/bibtex/WOS-search-20200413.bib")
 M0 <- convert2df(A0, dbsource = "isi", format = "bibtex")
@@ -36,7 +38,12 @@ References with information related to guidelines, methods and data gathering pr
 ",file=output.arch)
 
 ref.info$data %>% filter(doi %in% slc) %>% arrange(created) -> dts
-cat(file=output.arch,with(dts,sprintf("* %s (%s) [%s](http://doi.org/%s)\n",paste(author$family,collapse="; "), published.print,title,doi)),append=T)
+
+dts %>% pull(author) %>% ## map(`[`,c("given","family")) %>%
+ map(function(x) paste(gsub("[a-záéíóú\\. ]","",x$given),x$family,collapse=", ")) -> authors
+
+cat(file=output.arch,with(dts,sprintf("* %1$s (%2$s) *%3$s* DOI:[%4$s](http://doi.org/%4$s)\n",unlist(authors), substr(created,1,4),title,doi)),append=T)
+
 
 
 #### assessment
@@ -53,7 +60,14 @@ Actual implementation of the assessment following one set of guidelines, and pre
 ",file=output.arch)
 
 ref.info$data %>% filter(doi %in% slc) %>% arrange(created) -> dts
-cat(file=output.arch,with(dts,sprintf("* %s (%s) [%s](http://doi.org/%s)\n",paste(author$family,collapse="; "), published.print,title,doi)),append=T)
+
+##dts %>% pull(author) %>% map("given") -> nombres
+##dts %>% pull(author) %>% map("family") -> apellidos
+
+dts %>% pull(author) %>% ## map(`[`,c("given","family")) %>%
+ map(function(x) paste(gsub("[a-záéíóú\\. ]","",x$given),x$family,collapse=", ")) -> authors
+
+cat(file=output.arch,with(dts,sprintf("* %1$s (%2$s) *%3$s* DOI:[%4$s](http://doi.org/%4$s)\n",unlist(authors), substr(created,1,4),title,doi)),append=T)
 
 
 #### post-assessment
@@ -70,4 +84,8 @@ Publications that summarize assessment outcomes.
 ",file=output.arch)
 
 ref.info$data %>% filter(doi %in% slc) %>% arrange(created) -> dts
-cat(file=output.arch,with(dts,sprintf("* %s (%s) [%s](http://doi.org/%s)\n",paste(author$family,collapse="; "), published.print,title,doi)),append=T)
+
+dts %>% pull(author) %>% ## map(`[`,c("given","family")) %>%
+ map(function(x) paste(gsub("[a-záéíóú\\. ]","",x$given),x$family,collapse=", ")) -> authors
+
+cat(file=output.arch,with(dts,sprintf("* %1$s (%2$s) *%3$s* DOI:[%4$s](http://doi.org/%4$s)\n",unlist(authors), substr(created,1,4),title,doi)),append=T)
