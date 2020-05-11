@@ -2,7 +2,7 @@
 require(gdata)
 require(bibtex)
 require(RefManageR)
-require(RJSONIO)
+##require(RJSONIO)
 require(rcrossref)
 require(xml2)
 library(ggplot2)
@@ -15,9 +15,16 @@ library(ggplot2)
 ##require(rAltmetric)
 ##library(tidyr)
 
-mis.dois <- read.csv("~/proyectos/IUCN/RLE-publication-list/input/DOI-check-list.txt",header=F,as.is=T)$V1
+mis.dois <- unique(tolower(read.csv("~/proyectos/IUCN/RLE-publication-list/input/DOI-check-list.txt",header=F,as.is=T)$V1))
 
-ref.info <- GetBibEntryWithDOI(mis.dois[1:30],temp.file="~/proyectos/IUCN/RLE-publication-list/bibtex/tempfile.bib",delete.file=F)
+ref.info <- ReadBib("~/proyectos/IUCN/RLE-publication-list/bibtex/RLE-collection-DOI-download.bib")
+
+unlist(lapply(ref.info, function(x) x$doi))
+table(mis.dois %in% tolower(unlist(lapply(ref.info, function(x) x$doi))))
+faltan <- subset(mis.dois,!mis.dois %in% unlist(lapply(ref.info, function(x) x$doi)))
+print(ref.info,.opts=list(style='markdown',bib.style='authoryear'))
+
+ref.info <- GetBibEntryWithDOI(faltan,temp.file="~/proyectos/IUCN/RLE-publication-list/bibtex/tempfile.bib",delete.file=F)
 
 ref.info <- cr_works(dois = mis.dois,.progress="text")
 
