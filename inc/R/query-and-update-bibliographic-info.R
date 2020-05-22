@@ -15,17 +15,41 @@ library(ggplot2)
 ##require(rAltmetric)
 ##library(tidyr)
 
-mis.dois <- unique(tolower(read.csv("~/proyectos/IUCN/RLE-publication-list/input/DOI-check-list.txt",header=F,as.is=T)$V1))
+doi.checklist <- unique(tolower(read.csv("~/proyectos/IUCN/RLE-publication-list/input/DOI-check-list.txt",header=F,as.is=T)$V1))
+doi.steps <- unique(tolower(read.csv("~/proyectos/IUCN/RLE-publication-list/input/assessment-step.csv",header=F,as.is=T)$V1))
+doi.errors <- unique(tolower(read.csv("~/proyectos/IUCN/RLE-publication-list/input/doi-errors.txt",header=F,as.is=T)$V1))
+mis.dois <- unique(c(doi.steps,doi.checklist))
+
+mis.dois <- subset(mis.dois,!mis.dois %in% doi.errors)
+ref.info <- ReadBib("~/proyectos/IUCN/RLE-publication-list/bibtex/RLE-collection-DOI-download.bib")
+
+listos <- unlist(lapply(ref.info, function(x) x$doi))
+table(mis.dois %in% listos)
+
+dwnl <- GetBibEntryWithDOI(faltan,temp.file="~/proyectos/IUCN/RLE-publication-list/bibtex/tempfile.bib",delete.file=F)
+
 
 ref.info <- ReadBib("~/proyectos/IUCN/RLE-publication-list/bibtex/RLE-collection-DOI-download.bib")
 
-unlist(lapply(ref.info, function(x) x$doi))
-table(mis.dois %in% tolower(unlist(lapply(ref.info, function(x) x$doi))))
-faltan <- subset(mis.dois,!mis.dois %in% unlist(lapply(ref.info, function(x) x$doi)))
-print(ref.info,.opts=list(style='markdown',bib.style='authoryear'))
+ref.doi <- unlist(lapply(ref.info, function(x) x$doi))
 
-ref.info <- GetBibEntryWithDOI(faltan,temp.file="~/proyectos/IUCN/RLE-publication-list/bibtex/tempfile.bib",delete.file=F)
+doi.steps <- read.csv("~/proyectos/IUCN/RLE-publication-list/input/assessment-step.csv",header=F,as.is=T)
 
+cat("
+---
+title: Assessment publications
+---
+
+Actual implementation of the assessment following one set of guidelines, and presenting a proper outcome for each assessment unit
+",file="~/proyectos/IUCN/RLE-publication-list/docs/_listas/02-assessment.md")
+
+slc <- seq(along=ref.doi)[ref.doi %in% subset(doi.steps,V2 %in% "assessment")$V1]
+
+entries <- print(ref.info[slc],.opts=list(style='markdown',bib.style='authoryear'))
+
+cat(unlist(entries),file="~/proyectos/IUCN/RLE-publication-list/docs/_listas/02-assessment.md",append=T)
+PrintBibliography(ref.info[slc], .opts = list(style = "markdown",
+                       bib.style = "authoryear"))
 ref.info <- cr_works(dois = mis.dois,.progress="text")
 
 ref.info$data$title
