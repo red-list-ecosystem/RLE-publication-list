@@ -14,7 +14,7 @@ cat(sprintf("{{cite journal
 | access-date =  %9$s
 }}",
 paste(sprintf("| last%1$s = %2$s | first%1$s = %3$s",1:length(rslt$data$author[[1]]$family),rslt$data$author[[1]]$family,ifelse(is.na(rslt$data$author[[1]]$given),"",rslt$data$author[[1]]$given)),collapse=""),
-strsplit(rslt$data$published.print,"-")[[1]][1],
+strsplit(rslt$data$published.online,"-")[[1]][1],
 rslt$data$title,
 rslt$data$url,
 rslt$data$container.title,
