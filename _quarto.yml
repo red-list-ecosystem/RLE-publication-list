@@ -1,0 +1,51 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  title: "IUCN RLE bibliography"
+  description: >- # this means to ignore newlines until next item:
+    Lists of scientific publications and other resources related to the IUCN Red List of Ecosystems.
+  repo-url: https://github.com/red-list-ecosystem/RLE-publication-list/
+  repo-branch: master
+  repo-actions: [edit, issue]
+  navbar:
+    title: "IUCN RLE bibliography"
+    type: inverse
+    left:
+      - text: "Home"
+        icon: fa-home
+        href: index.qmd
+      - text: "Lists of publications"
+        menu:
+          - text: "Pre-assessment publications"
+            href: publists/01-pre-assessment.qmd
+          - text: "RLE assessments"
+            href: publists/02-assessment.qmd
+          - text: "Post-assessment publications"
+            href: publists/03-post-assessment.qmd
+      - text: "Selected publications"
+        menu:
+          - text: "Key publications"
+            href: pubs/my-favs.qmd
+          - text: "Comments and notes"
+            href: pubs/my-favs.qmd
+      - text: "Bibliometric analysis"
+        menu:
+          - text: "Dashboard"
+            icon: book
+            href: pubs/my-favs.qmd
+    right:
+      - text: "How to..."
+        icon: question
+        menu:
+          - text: "(re-)create this site"
+            href: how2/how-to-site.qmd
+format:
+  html:
+    theme: 
+      light: sandstone
+      dark: cyborg
+    css: styles.css
+    toc: true
+lang: en

@@ -1,0 +1,16 @@
+---
+title: "List of research outputs"
+date: "04/09/2022"
+bibliography: 
+  - ../bibTeX/austral-ecology.bib
+  - ../bibTeX/RLEcollection.bib
+nocite: |
+  @*
+---
+
+## List of publication 
+
+This is a list of publications from different sources.
+
+::: {#refs}
+:::

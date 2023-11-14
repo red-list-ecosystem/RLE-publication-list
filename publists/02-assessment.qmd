@@ -1,0 +1,42 @@
+
+---
+title: Assessment publications
+---
+
+
+```{r}
+library(RefManageR)
+here::i_am("publists/02-assessment.qmd")
+
+BibOptions(check.entries = FALSE, style = "markdown", cite.style = "authoryear",
+           bib.style = "numeric", hyperlink = FALSE)
+```
+
+```{r}
+a.step <- read.csv(here::here("input/assessment-step.csv"),header=F,as.is=T)
+dois <- subset(a.step,V2=="assessment")$V1
+```
+
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+bib1 <- ReadBib(here::here("bibTeX","RLE-collection-DOI-download.bib"), check = FALSE)
+NoCite(bib = bib1, doi=dois, .opts = list(hyperlink = FALSE))
+```
+
+
+## Risk assessment publications
+
+Actual implementation of the assessment following one set of guidelines, and presenting a proper outcome for each assessment unit
+
+
+```{r results = "asis", echo = FALSE}
+PrintBibliography(bib1, .opts = list(check.entries = FALSE, max.names=100, sorting = "ydnt"))
+```
+
+## Authors
+
+```{r}
+bib2 <- SearchBib(bib1,doi=dois)
+rev(sort(table(unlist(lapply(bib2, function(x) tolower(x$author$family))))))
+```
+

@@ -1,0 +1,182 @@
+---
+author: "José R. Ferrer Paris"
+title: "This is how we built this!"
+editor_options: 
+  chunk_output_type: console
+---
+
+## No place like home
+
+This is a test of a personal website for [jrfep](https://jrfep.github.io/).
+
+These instructions are in English, but this site has content in multiple languages... I know it is confusing, but this is how I work. If you require clarifications please open an issue or send me a message. 
+
+All files are available in a [GitHub repository](https://github.com/jrfep/jrfep.github.io).  The `mostly-harmless` branch uses [Quarto](https://quarto.org/docs/websites/) to build the site.
+
+
+## Libraries
+
+To manage and update the version of libraries that we need, I used `renv` for some iterations, but it was complex to keep version across machines and different OSs...
+
+When we use `renv` we need to run different commands, until all the changes have been synchronised[^1] :
+
+```{r}
+#| eval: false
+renv::init()
+renv::status()
+renv::install()
+renv::status()
+renv::snapshot()
+```
+
+But if we don't update the .gitignore file things can get messy.
+
+## Render site
+
+With Rmarkdown we could run this (in RStudio) to render site locally:
+```{r}
+#| eval: false
+rmarkdown::render_site()
+```
+
+Or preview one file
+```{r}
+#| eval: false
+rmarkdown::render_site("presentations.Rmd")
+```
+
+With quarto and RStudio we can open the Build tab and select Build Website...
+
+Or we can go to the command line and render the site: 
+
+```{sh}
+#| eval: false
+quarto render 
+```
+
+Sing [All the rowboats](https://youtu.be/2CZ8ossU4pc) in the meantime (optional).
+
+And then launch a preview:
+
+```{sh}
+#| eval: false
+quarto preview
+```
+
+If this work, we can just `git add`, `git commit` and `git push` it to the repo and see the changes!
+
+## Alternatives
+
+My [other branch](https://github.com/jrfep/jrfep.github.io/tree/jekyll) uses Jekyll (but I gave up on that some time ago, so do not expect any updates).
+
+I [also tried](https://github.com/jrfep/jrfep.github.io/tree/mrhyde) Rmarkdown for some time, might get back to that if this one does not work. 
+
+I was tempted to create a multi-lingual site using [babelquarto](https://github.com/ropensci-review-tools/babelquarto):
+
+```{r}
+#| eval: false
+install.packages('babelquarto', repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org'))
+```
+
+But it was a short-lived experiment. I think it could work for simple sites, but would require more tweaks to make it work with my current site. 
+
+## Font Awesome
+
+They work well out of the box with Rmarkdown, but for quarto we need to install an extension.
+
+Switch to the repository folder and checkout the git branch we are working on, and then:
+
+```sh
+quarto install extension quarto-ext/fontawesome
+```
+
+Now I can use `{{{< fa smile >}}}` in the text and get a {{< fa smile >}}, or `{{{< fa lemon >}}}` and get a {{< fa lemon >}}.
+
+## Just in case
+
+![ [Stand back, I know regular expressions.](https://xkcd.com/208/)](https://imgs.xkcd.com/comics/regular_expressions.png)
+
+
+[^1]: Yes, I use this [weird spelling...](https://english.stackexchange.com/questions/230494/should-i-always-use-the-ised-ending-for-uk-english-and-the-ized-for-us)
+
+## Prepare data for some pages
+
+### OSF data
+
+```{r}
+#| eval: false
+here::i_am("how2/how-to-site.qmd")
+if (!require(osfr)) {
+  install.packages("osfr")
+  library(osfr)
+}
+lst_osf <- osf_retrieve_user("me") %>%
+  osf_ls_nodes()
+if (!dir.exists(here::here("data")))
+    dir.create(here::here("data"))
+file_name <- here::here("data","OSF-data.rds")
+saveRDS(file=file_name, lst_osf)
+```
+
+
+### GitHub data
+
+```{r}
+#| eval: false
+here::i_am("how2/how-to-site.qmd")
+if (!require(jsonlite)) {
+  install.packages("jsonlite")
+  library(jsonlite)
+}
+gh_rle_org <- read_json("https://api.github.com/orgs/red-list-ecosystem/repos")
+gh_ces_org <- read_json("https://api.github.com/orgs/ces-unsw-edu-au/repos")
+gh_jrfep <- read_json("https://api.github.com/users/jrfep/repos")
+# https://api.github.com/search/repositories?q=user:jrfep&fork:false
+# for each repo query the languages_url and summarise the lines of code for each language
+file_name <- here::here("data","GitHub-data.rda")
+save(file=file_name, gh_rle_org, gh_ces_org, gh_jrfep)
+```
+
+### Flexdashboard and iNaturalist
+
+I use to have a dashboard here, but it works better with Rmarkdown than with quarto. SO I moved it to another site/repo.
+
+There might be some alternatives in quarto for this, but haven't tested them yet.
+
+That OLD dashboard was inspired by this example:
+https://github.com/gonzalobravoargentina/inat_flexdashboard_ARG
+
+To get the data I first install the `rinat` package:
+
+```{r}
+#| eval: false
+here::i_am("README.Rmd")
+if (!require(rinat)) {
+  install.packages("rinat")
+  library(rinat)
+}
+```
+
+Then I can download the observations from iNaturalist and save them in a data folder:
+
+```{r}
+#| eval: false
+# Download observations and save to RDS file
+user_obs <- get_inat_obs_user("NeoMapas",maxresults = 5000)
+if (!dir.exists(here::here("data")))
+    dir.create(here::here("data"))
+file_name <- here::here("data","iNaturalist-obs-NeoMapas.rds")
+saveRDS(file=file_name, user_obs)
+
+```
+
+To get the logo
+
+With `wget` and ImageMagick, it is easy to download and resize in the terminal (`bash`) with two lines of code:
+
+```sh
+##mkdir 
+wget https://neomapas.github.io/assets/images/logo_NeoMapas_p.gif
+magick logo_NeoMapas_p.gif  -resize 100x148  resize_logo.gif
+```
+
