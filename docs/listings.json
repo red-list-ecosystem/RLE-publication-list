@@ -2,9 +2,10 @@
   {
     "listing": "/pubs/my-favs.html",
     "items": [
-      "/pubs/Africa-example.html",
       "/pubs/T6.1-glaciares-tropicales.html",
-      "/pubs/Myanmar-example.html"
+      "/pubs/GET-version-2.0.html",
+      "/pubs/Myanmar-example.html",
+      "/pubs/Africa-example.html"
     ]
   }
 ]

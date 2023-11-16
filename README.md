@@ -12,4 +12,3 @@ https://www.altmetric.com/details.php?domain=www.altmetric.com&citation_id=96056
 
 # plumix
 
-https://plu.mx/plum/a/?doi=10.2305/iucn.ch.2020.13.en

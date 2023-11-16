@@ -1,18 +1,26 @@
 ---
-title: "Kayin evergreen tropical rainforest"
+title: "Myanmar’s terrestrial ecosystems"
+subtitle: "Status, threats and conservation opportunities"
+include-before-body:
+  text: |
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+    <script type="text/javascript" 
+      src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js">
+    </script>
+bibliography: 
+  - ../bibTeX/RLE-collection-DOI-download.bib
 ---
 
+A report of the Red List of Ecosystem assessment of the terrestrial ecosystems of Myanmar is available as a report from the webapp: <https://www.myanmar-ecosystems.org/>
+
+A summary was published as a journal article [@Murray_2020].
+
+Datasets in figshare...
 
 
-https://www.myanmar-ecosystems.org/
+This publication is mentioned in Blogs like <https://blog.scienceopen.com/2022/05/exploring-the-sdgs-on-scienceopen-15-life-on-land/> and cited in wikipedia pages.
 
-https://www.myanmar-ecosystems.org/myanmar-ecosystems/t1-1-5-kayin-evergreen-tropical-rainforest
+<a href="https://plu.mx/plum/a/?doi=10.1016/j.biocon.2020.108834" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Myanmar’s terrestrial ecosystems</a>
 
-Description
-
-This very diverse, closed-canopy, non-sundaic rainforest comprises a diverse suite of trees including prominent Dipterocarpaceae, but few emergents. Buttressed trees are common, epiphytes, ferns and lianas are abundant. Canes, palms and bamboos are present in the understorey, and become abundant in areas of high disturbance. This ecosystem has a more seasonal climate, and a less diverse biota than upland and lowland rainforests further south in Tanintharyi. Nevertheless, it supports a diverse fauna community with birds, bats and insects being important pollinators in the canopy.
-
-Assessment summary 
-
-This ecosystem is restricted to southeast Myanmar, and there is evidence of ongoing declines due to rubber plantation development, logging, and cutting timber for shifting cultivation. A climate simulation model does not suggest major reductions in environmental suitability and the Forest Landscape Integrity Index suggests remaining patches are relatively intact. Primary forest data suggest that more than 77% of this ecosystem has been degraded since 1750, meeting category thresholds for Endangered under Criterion D3. Endangered.
+<div class='altmetric-embed' data-badge-type='donut' data-doi="10.1016/j.biocon.2020.108834"></div>
 
