@@ -1,6 +1,44 @@
 ---
-title: "Glaciares tropicales"
-
+title: "Tropical glacier ecosystem of the Cordillera de Merida"
+subtitle: "Critically Endangered - Collapsed"
 ---
 
-Glaciar tropical de la Cordillera de Mérida 
+We completed an IUCN Red List of Ecosystem assessment of the tropical glacier ecosystem of the Cordillera de Mérida  considering 12 subcriteria and five criteria. 
+
+A peer-reviewed publication is currently in press [@Ferrer-Paris_Merida_2023].
+
+
+## Supplementary material
+
+A full assessment report is posted in EcoEvoRxiv.
+
+
+
+## Overall category
+
+The tropical glacier ecosystem of the Cordillera de Merida is considered **Critically Endangered** with strong evidence of being **Collapsed**: CR (CR-CO) status is based on almost all of the criteria assessed A1, A2b, A3, B1+2a(i)bc, C1, C2a, E
+
+## Summary of the assessment
+
+The workflow and outcomes of the assessment are summarised in the figure.
+
+![Graphical summary of the assessment][1]
+
+Data for the assessment comes from several sources (field sampling and measurements, cartography and literature review, climate models and remote sensing data) including five references focusing on the area of study (simple octagons) and three references based on global analysis (double octagons). Data extracted from the sources (grey boxes) was subject to several steps of analysis and interpretation (white boxes) and then compared to thresholds to assign a category of threat (colored circles). Criterion D was considered Data Deficient, subcriterion B3 was Not Evaluated, subcriterion C3 resulted in a category of Endangered and all other subcriteria resulted in category Critically Endangered.
+
+## Code
+
+The code for assembling the report as a PDF or web book is available in a [GitHub repository](https://github.com/red-list-ecosystem/T6.1-SA-01-VE-01-Cordillera-Merida).
+
+Ferrer-Paris, J. R., Llambí, L. D., & Melfo, A. (2023, October 5). RLE assessment of the Tropical Glacier Ecosystem of the Cordillera de Mérida. https://doi.org/10.17605/OSF.IO/Y3279
+
+## Data
+
+The data for the assessment is available in a [OSF project component](https://doi.org/10.17605/OSF.IO/N73WK).
+
+
+
+
+
+
+  [1]: https://files.osf.io/v1/resources/y3279/providers/osfstorage/6465ac820dbc2e0677dbee82?mode=render

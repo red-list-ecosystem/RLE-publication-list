@@ -9,6 +9,22 @@ include-before-body:
     </script>
 ---
 
+@Keith_RLE_Africa_2023
+
+## Alternative metrics
+
 <a href="https://plu.mx/plum/a/?doi=10.1111/cobi.14169" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">RLE in Africa</a>
 
 <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1111/cobi.14169"></div>
+
+## Pre-registration
+
+<https://doi.org/10.17605/OSF.IO/FGZAC>
+
+## Pre-print
+
+@keith_ghoraba_RLE_Africa_preprint_2022
+
+## Code and data 
+
+Code and data are available [@Ferrer-Paris_RLE_Africa_2023].

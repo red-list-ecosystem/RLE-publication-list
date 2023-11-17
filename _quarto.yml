@@ -27,8 +27,8 @@ website:
       - text: "Selected publications"
         menu:
           - text: "Key publications"
-            href: pubs/my-favs.qmd
-          - text: "Comments and notes"
+            href: key-pubs/my-favs.qmd
+          - text: "RLE projects"
             href: pubs/my-favs.qmd
       - text: "Bibliometric analysis"
         menu:
