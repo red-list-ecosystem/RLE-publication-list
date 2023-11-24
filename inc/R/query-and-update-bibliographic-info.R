@@ -33,9 +33,11 @@ table(mis.dois %in% listos)
 
 faltan <- mis.dois[!mis.dois %in% listos]
 
-dwnl <- GetBibEntryWithDOI(faltan,
-                           temp.file=here::here("bibtex","tempfile.bib"),
-                           delete.file=F)
+if (length(faltan)>0) {
+  dwnl <- GetBibEntryWithDOI(faltan,
+                             temp.file=here::here("bibtex","tempfile.bib"),
+                             delete.file=F)
+}
 
 
 
@@ -43,21 +45,11 @@ ref.doi <- unlist(lapply(ref.info, function(x) x$doi))
 
 ref.info <- cr_works(dois = mis.dois,.progress="text")
 
-ref.info$data$title
- print.AsIs(ref.info$data[,c("doi","title")])
+save(file = here::here("Rdata","CR-biblio-info.rda"),
+     ref.info)
 
-system("mkdir -p ~/proyectos/IUCN/RLE-publication-list/Rdata")
-save(file="~/proyectos/IUCN/RLE-publication-list/Rdata/CR-biblio-info.rda",ref.info)
 
-## Intro en https://poldham.github.io/abs/crossref.html
-ref.info$data %>% count(subject, sort = TRUE)
-ref.info$data %>% separate_rows(subject, sep = ",") %>%
-  count(subject=trim(subject), sort = TRUE) -> subjects  # output subjects
 
-subjects %>%
-  ggplot2::ggplot(aes(subject, n, fill = subject)) +
-  geom_bar(stat = "identity", show.legend = FALSE) +
-  coord_flip()
 ref.info$data$year <- as.numeric(substr(ref.info$data$issued,0,4))
 ref.info$data %>%
     count(year) %>%

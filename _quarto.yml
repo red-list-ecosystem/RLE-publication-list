@@ -32,9 +32,9 @@ website:
             href: pubs/my-favs.qmd
       - text: "Bibliometric analysis"
         menu:
-          - text: "Dashboard"
-            icon: book
-            href: pubs/my-favs.qmd
+          - text: "Citation plot"
+            icon: gear
+            href: plots/citation-plot.qmd
     right:
       - text: "How to..."
         icon: question

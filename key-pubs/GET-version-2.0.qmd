@@ -1,35 +1,31 @@
 ---
 title: "IUCN Global Ecosystem Typology"
 subtitle: "descriptive profiles for biomes and ecosystem functional groups"
-include-before-body:
-  text: |
-    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
-    <script type="text/javascript" 
-      src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js">
-    </script>
 ---
 
 ## Versions
 
+Version 1.0 was available as an internal report, does not have a permanent url/id.
 
+Version 2.0 is available as an IUCN report [@GET_v2.0_2020].
+
+Version 2.1 is available as supplementary material to the journal article [@Keith_2022_Ecosystem_Typology].
 
 ## Related resources
 
-WebApp: https://global-ecosystems.org/
+The WebApp is available at <https://global-ecosystems.org/>.
 
-Information about maps: https://jrfep.github.io/Ecosystem-profiles-comments/
+Multiple data and code repositories are consolidated in an [OSF project](https://osf.io/68syg/)  [@Ferrer-Paris_Typology_OSF_2023].
 
-@Ferrer-Paris_Typology_OSF_2023
+Additional webpages with [information about maps](https://jrfep.github.io/Ecosystem-profiles-comments/).
 
-Updating content of the typology
-
-https://osf.io/5ay6q/
-
+## Citation counts
 
 
 ## Alternative metrics
 
-<a href="https://plu.mx/plum/a/?doi=10.2305%2Fiucn.ch.2020.13.en" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Metrics from PlumX</a>
+
+<a href="https://plu.mx/plum/a/?doi=10.2305%2Fiucn.ch.2020.13.en" data-orientation="vertical" class="plumx-summary" data-site="plum" data-hide-when-empty="false">Metrics from PlumX</a>
 
 
 <div class='altmetric-embed' data-badge-type='donut' data-doi="10.2305/iucn.ch.2020.13.en"></div>

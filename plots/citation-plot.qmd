@@ -1,0 +1,88 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+## Load data
+
+```{r}
+here::i_am("plots/citation-plot.qmd")
+load(here::here("Rdata","CR-biblio-info.rda"))
+```
+
+## Load library
+
+```{r}
+library(plotly)
+library(dplyr)
+library(lubridate)
+library(stringr)
+library(ggplot2)
+library(tidyr)
+
+```
+
+## plot
+
+```{r}
+#| fig-height: 10
+#| fig-widht: 8
+d <- ref.info$data %>% 
+  select(doi, title, prefix, 
+         short.container.title,
+         container.title, issued, is.referenced.by.count) %>%
+  mutate(
+    title = str_remove_all(title, "<[a-z/]+>") %>% 
+      str_replace_all("Red List of Ecosyste(ms|m)","RLE"),
+    container.title = case_when(
+      prefix %in% c("10.32942") ~ "EcoEvoRxiv",
+      prefix %in% c("10.2305") ~ "IUCN",
+      is.na(container.title) ~ prefix,
+      TRUE ~ container.title),
+    short.container.title = coalesce(short.container.title, container.title) %>%
+      str_to_lower(),
+    citations=as.numeric(is.referenced.by.count),
+    date = case_when(
+    nchar(issued) == 10 ~ ymd(issued),
+    nchar(issued) == 7 ~ ym(issued),
+    nchar(issued) == 4 ~ ym(sprintf("%s-01",issued))
+  )) %>% mutate(
+    short.container.title = str_replace_all(short.container.title,
+                                            c("journal" = "j.",
+                                              "annals" = "ann.",
+                                              "association" = "assoc.",
+                                              "geographers" = "geog.",
+                                              "american" = "am."))
+  )
+
+dim(d)
+
+fig <- plot_ly(
+  d, x = ~date, y = ~short.container.title,
+  # Hover text:
+  text = ~sprintf("title: %s<br>doi: %s<br>Issued: %s<br>Citations: %d", 
+                  str_trunc(title,50), doi, issued, citations)
+)
+fig <- add_markers(fig, color = ~citations, size = ~citations)
+
+layout(fig,
+       title = "Citations per publication",
+       xaxis = list(title="Issued (date)"),
+       yaxis = list(title="Journal / Repository / Publisher")
+       )
+```
+
+
+```{r}
+
+## Intro en https://poldham.github.io/abs/crossref.html
+ref.info$data %>% count(subject, sort = TRUE)
+ref.info$data %>% separate_longer_delim(subject, delim = ",") %>%
+  count(subject=str_trim(subject), sort = TRUE) -> subjects  # output subjects
+
+subjects %>%
+  ggplot2::ggplot(aes(subject, n, fill = subject)) +
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  coord_flip()
+```
+

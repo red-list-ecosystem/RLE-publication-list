@@ -1,4 +1,4 @@
-include-before-body:
+include-in-header:
   text: |
     <script type="text/javascript" src="https://cdn.plu.mx/widget-popup.js"></script>
     <script type="text/javascript" 
