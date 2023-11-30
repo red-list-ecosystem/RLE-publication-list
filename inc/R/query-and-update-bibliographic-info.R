@@ -23,9 +23,17 @@ mis.dois <- unique(c(doi.steps,doi.checklist))
 
 mis.dois <- subset(mis.dois,!mis.dois %in% doi.errors)
 
-
+if (dir.exists(here::here("bibTeX"))) {
+  bibtex_folder <- "bibTeX"
+} else {
+  if (dir.exists(here::here("bibtex"))) {
+    bibtex_folder <- "bibtex"
+  } else {
+    stop("folder for bibTeX file not found")
+  }
+}
 ref.info <- ReadBib(
-  here::here("bibtex","RLE-collection-DOI-download.bib")
+  here::here(bibtex_folder,"RLE-collection-DOI-download.bib")
 )
 
 listos <- unlist(lapply(ref.info, function(x) x$doi))
@@ -35,7 +43,7 @@ faltan <- mis.dois[!mis.dois %in% listos]
 
 if (length(faltan)>0) {
   dwnl <- GetBibEntryWithDOI(faltan,
-                             temp.file=here::here("bibtex","tempfile.bib"),
+                             temp.file=here::here(bibtex_folder,"tempfile.bib"),
                              delete.file=F)
 }
 
