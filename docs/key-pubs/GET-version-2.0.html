@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -61,6 +80,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="text/javascript" src="https://cdn.plu.mx/widget-popup.js"></script>
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js">
+</script>
 
 
 </head>
@@ -127,9 +149,9 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-bibliometric-analysis">    
         <li>
-    <a class="dropdown-item" href="../pubs/my-favs.html" rel="" target=""><i class="bi bi-book" role="img">
+    <a class="dropdown-item" href="../plots/citation-plot.html" rel="" target=""><i class="bi bi-gear" role="img">
 </i> 
- <span class="dropdown-text">Dashboard</span></a>
+ <span class="dropdown-text">Citation plot</span></a>
   </li>  
     </ul>
   </li>
@@ -167,15 +189,13 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#versions" id="toc-versions" class="nav-link active" data-scroll-target="#versions">Versions</a></li>
   <li><a href="#related-resources" id="toc-related-resources" class="nav-link" data-scroll-target="#related-resources">Related resources</a></li>
+  <li><a href="#citation-counts" id="toc-citation-counts" class="nav-link" data-scroll-target="#citation-counts">Citation counts</a></li>
   <li><a href="#alternative-metrics" id="toc-alternative-metrics" class="nav-link" data-scroll-target="#alternative-metrics">Alternative metrics</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/red-list-ecosystem/RLE-publication-list/edit/master/key-pubs/GET-version-2.0.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/red-list-ecosystem/RLE-publication-list/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
-<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js">
-</script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -197,26 +217,41 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="versions" class="level2">
 <h2 class="anchored" data-anchor-id="versions">Versions</h2>
+<p>Version 1.0 was available as an internal report, does not have a permanent url/id.</p>
+<p>Version 2.0 is available as an IUCN report <span class="citation" data-cites="GET_v2.0_2020">(<a href="#ref-GET_v2.0_2020" role="doc-biblioref">Keith et al. 2020</a>)</span>.</p>
+<p>Version 2.1 is available as supplementary material to the journal article <span class="citation" data-cites="Keith_2022_Ecosystem_Typology">(<a href="#ref-Keith_2022_Ecosystem_Typology" role="doc-biblioref">Keith et al. 2022</a>)</span>.</p>
 </section>
 <section id="related-resources" class="level2">
 <h2 class="anchored" data-anchor-id="related-resources">Related resources</h2>
-<p>WebApp: https://global-ecosystems.org/</p>
-<p>Information about maps: https://jrfep.github.io/Ecosystem-profiles-comments/</p>
-<p><span class="citation" data-cites="Ferrer-Paris_Typology_OSF_2023">@Ferrer-Paris_Typology_OSF_2023</span></p>
-<p>Updating content of the typology</p>
-<p>https://osf.io/5ay6q/</p>
+<p>The WebApp is available at <a href="https://global-ecosystems.org/" class="uri">https://global-ecosystems.org/</a>.</p>
+<p>Multiple data and code repositories are consolidated in an <a href="https://osf.io/68syg/">OSF project</a> <span class="citation" data-cites="Ferrer-Paris_Typology_OSF_2023">(<a href="#ref-Ferrer-Paris_Typology_OSF_2023" role="doc-biblioref">Ferrer-Paris 2023</a>)</span>.</p>
+<p>Additional webpages with <a href="https://jrfep.github.io/Ecosystem-profiles-comments/">information about maps</a>.</p>
+</section>
+<section id="citation-counts" class="level2">
+<h2 class="anchored" data-anchor-id="citation-counts">Citation counts</h2>
 </section>
 <section id="alternative-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="alternative-metrics">Alternative metrics</h2>
-<p><a href="https://plu.mx/plum/a/?doi=10.2305%2Fiucn.ch.2020.13.en" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Metrics from PlumX</a></p>
+<p><a href="https://plu.mx/plum/a/?doi=10.2305%2Fiucn.ch.2020.13.en" data-orientation="vertical" class="plumx-summary" data-site="plum" data-hide-when-empty="false">Metrics from PlumX</a></p>
 <div class="altmetric-embed" data-badge-type="donut" data-doi="10.2305/iucn.ch.2020.13.en">
 
 </div>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Ferrer-Paris_Typology_OSF_2023" class="csl-entry" role="listitem">
+Ferrer-Paris, José R. 2023. <span>“IUCN Global Ecosystem Typology: Resources, Code and Data for Mapping Global Ecosystems.”</span> OSF. <a href="https://osf.io/68syg">osf.io/68syg</a>.
+</div>
+<div id="ref-GET_v2.0_2020" class="csl-entry" role="listitem">
+Keith, David A., Jose R. Ferrer-Paris, Emily Nicholson, and Richard T. Kingsford, eds. 2020. <em><span>IUCN</span> Global Ecosystem Typology 2.0: Descriptive Profiles for Biomes and Ecosystem Functional Groups</em>. <span>IUCN</span>, International Union for Conservation of Nature. <a href="https://doi.org/10.2305/iucn.ch.2020.13.en">https://doi.org/10.2305/iucn.ch.2020.13.en</a>.
+</div>
+<div id="ref-Keith_2022_Ecosystem_Typology" class="csl-entry" role="listitem">
+Keith, David A., José R. Ferrer-Paris, Emily Nicholson, Melanie J. Bishop, Beth A. Polidoro, Eva Ramirez-Llodra, Mark G. Tozer, et al. 2022. <span>“A Function-Based Typology for Earth’s Ecosystems.”</span> <em>Nature</em> 610: 513–18. <a href="https://doi.org/10.1038/s41586-022-05318-4">https://doi.org/10.1038/s41586-022-05318-4</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
